@@ -1,0 +1,2590 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Shezy Pizza Shop | Pizza & Food in Karachi</title>
+    <meta name="description" content="Explore Mr. Shezy Pizza Shop in Gulshan-e-Iqbal, Karachi for pizzas, sides, burgers, pasta, snacks and more.">
+    
+    <meta property="og:title" content="Mr. Shezy Pizza Shop | Pizza & Food in Karachi">
+    <meta property="og:description" content="Explore delicious pizzas, sides and favorites from Mr. Shezy Pizza Shop in Gulshan-e-Iqbal, Karachi.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-deep-charcoal: #121212;
+            --bg-black: #0a0a0a;
+            --bg-card: #1c1c1c;
+            --bg-card-hover: #262626;
+            --text-warm-white: #f8f9fa;
+            --text-cream: #f1ede1;
+            --text-muted: #a3a3a3;
+            --tomato-red: #e63946;
+            --deep-red: #c51f33;
+            --golden-yellow: #ffb703;
+            --soft-beige: #e9edc9;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-black);
+            color: var(--text-warm-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            color: var(--text-warm-white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            font-size: 1.4rem;
+            letter-spacing: 0.5px;
+            color: var(--text-warm-white);
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .logo span {
+            color: var(--tomato-red);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-cream);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--tomato-red);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .nav-btn-search, .nav-btn-cart {
+            background: none;
+            color: var(--text-warm-white);
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .nav-btn-search:hover, .nav-btn-cart:hover {
+            color: var(--golden-yellow);
+        }
+
+        .call-btn {
+            background-color: var(--tomato-red);
+            color: white;
+            padding: 0.6rem 1.25rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .call-btn:hover {
+            background-color: var(--deep-red);
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background-color: var(--text-warm-white);
+            transition: var(--transition);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 0 5rem;
+            background: linear-gradient(to right, rgba(10,10,10,0.95), rgba(10,10,10,0.7)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 650px;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: var(--tomato-red);
+            color: white;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--deep-red);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(230, 57, 70, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-warm-white);
+            border: 2px solid var(--border-color);
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-warm-white);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .floating-badges {
+            position: absolute;
+            bottom: 3rem;
+            right: 5%;
+            display: flex;
+            gap: 1rem;
+            z-index: 2;
+        }
+
+        .badge-card {
+            background: rgba(28, 28, 28, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-color);
+            padding: 1rem 1.5rem;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+
+        .badge-card i {
+            color: var(--golden-yellow);
+            font-size: 1.25rem;
+        }
+
+        .badge-card span {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* --- FEATURE STRIP --- */
+        .feature-strip {
+            background-color: var(--bg-deep-charcoal);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 3rem 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(230, 57, 70, 0.4);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(230, 57, 70, 0.1);
+            color: var(--tomato-red);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+        }
+
+        .feature-text h4 {
+            font-size: 1.05rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-text p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* --- ABOUT SECTION --- */
+        .about-section {
+            padding: 7rem 0;
+            background-color: var(--bg-black);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            height: 480px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .about-content h2 {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .about-content p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        /* --- SECTION HEADINGS --- */
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header span {
+            color: var(--tomato-red);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 3vw, 2.75rem);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* --- MENU SECTION --- */
+        .menu-section {
+            padding: 7rem 0;
+            background-color: var(--bg-deep-charcoal);
+        }
+
+        .menu-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .search-sort-bar {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .search-box input {
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 0.85rem 1rem 0.85rem 3rem;
+            border-radius: 50px;
+            color: var(--text-warm-white);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            border-color: var(--tomato-red);
+            outline: none;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .sort-box select {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 0.85rem 1.5rem;
+            border-radius: 50px;
+            color: var(--text-warm-white);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .sort-box select:focus {
+            border-color: var(--tomato-red);
+            outline: none;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 0.75rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+            scrollbar-width: none;
+        }
+
+        .filter-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tab-btn {
+            background: var(--bg-card);
+            color: var(--text-cream);
+            border: 1px solid var(--border-color);
+            padding: 0.6rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: var(--transition);
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+            background-color: var(--tomato-red);
+            border-color: var(--tomato-red);
+            color: white;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(230, 57, 70, 0.3);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+        }
+
+        .menu-card-img {
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .menu-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .menu-card:hover .menu-card-img img {
+            transform: scale(1.05);
+        }
+
+        .menu-category-tag {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(10, 10, 10, 0.75);
+            backdrop-filter: blur(4px);
+            color: var(--golden-yellow);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+        }
+
+        .menu-card-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .menu-card-body h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-card-body p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .menu-card-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .btn-details {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-warm-white);
+            border: 1px solid var(--border-color);
+            padding: 0.6rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-details:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-enquire {
+            flex: 1;
+            background: var(--tomato-red);
+            color: white;
+            padding: 0.6rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-enquire:hover {
+            background: var(--deep-red);
+        }
+
+        /* --- PIZZA COLLECTION --- */
+        .pizza-section {
+            padding: 7rem 0;
+            background-color: var(--bg-black);
+        }
+
+        .pizza-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .pizza-item-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .pizza-item-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--tomato-red);
+        }
+
+        .pizza-item-img {
+            height: 180px;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 1.25rem;
+        }
+
+        .pizza-item-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .pizza-item-card:hover .pizza-item-img img {
+            transform: scale(1.05);
+        }
+
+        .pizza-item-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .pizza-item-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            padding: 0 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* --- PIZZA STYLE EXPLORER --- */
+        .explorer-section {
+            padding: 7rem 0;
+            background-color: var(--bg-deep-charcoal);
+        }
+
+        .explorer-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .explorer-tab-btn {
+            background: var(--bg-card);
+            color: var(--text-cream);
+            border: 1px solid var(--border-color);
+            padding: 0.75rem 1.75rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .explorer-tab-btn:hover, .explorer-tab-btn.active {
+            background-color: var(--golden-yellow);
+            border-color: var(--golden-yellow);
+            color: var(--bg-black);
+        }
+
+        /* --- SIDES & SNACKS --- */
+        .sides-section {
+            padding: 7rem 0;
+            background-color: var(--bg-black);
+        }
+
+        /* --- COMBINATION MEAL SECTION --- */
+        .meal-builder-section {
+            padding: 7rem 0;
+            background-color: var(--bg-deep-charcoal);
+        }
+
+        .builder-wrapper {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        .builder-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .builder-group h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--golden-yellow);
+        }
+
+        .builder-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 1rem;
+        }
+
+        .builder-option-btn {
+            background: var(--bg-deep-charcoal);
+            border: 1px solid var(--border-color);
+            color: var(--text-warm-white);
+            padding: 1rem;
+            border-radius: 14px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .builder-option-btn:hover, .builder-option-btn.selected {
+            border-color: var(--tomato-red);
+            background: rgba(230, 57, 70, 0.1);
+        }
+
+        .builder-summary {
+            background: var(--bg-black);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .builder-summary h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+        }
+
+        .summary-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex: 1;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .summary-item span:last-child {
+            color: var(--text-warm-white);
+            font-weight: 600;
+        }
+
+        /* --- PIZZA SIZE GUIDE --- */
+        .size-guide-section {
+            padding: 7rem 0;
+            background-color: var(--bg-black);
+        }
+
+        .size-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .size-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .size-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 183, 3, 0.4);
+        }
+
+        .size-icon {
+            font-size: 3rem;
+            color: var(--golden-yellow);
+            margin-bottom: 1rem;
+        }
+
+        .size-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .size-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .size-note {
+            text-align: center;
+            font-size: 1.05rem;
+            color: var(--golden-yellow);
+            font-weight: 500;
+        }
+
+        /* --- ORDER FLOW & CHECKLIST --- */
+        .flow-section {
+            padding: 7rem 0;
+            background-color: var(--bg-deep-charcoal);
+        }
+
+        .flow-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .flow-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .flow-step-num {
+            position: absolute;
+            top: -15px;
+            left: 2rem;
+            background: var(--tomato-red);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .flow-card h3 {
+            font-size: 1.15rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .flow-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .checklist-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .checklist-container h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .checklist-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--bg-deep-charcoal);
+            border: 1px solid var(--border-color);
+            padding: 1rem 1.25rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .checklist-item:hover {
+            border-color: var(--tomato-red);
+        }
+
+        .checklist-item input {
+            accent-color: var(--tomato-red);
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .checklist-item label {
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .checklist-actions {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-clear {
+            background: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .btn-clear:hover {
+            color: var(--text-warm-white);
+            border-color: var(--text-warm-white);
+        }
+
+        /* --- FOOD GALLERY --- */
+        .gallery-section {
+            padding: 7rem 0;
+            background-color: var(--bg-black);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            height: 260px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10,10,10,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            color: white;
+            font-size: 1.5rem;
+            background: rgba(230, 57, 70, 0.8);
+            padding: 1rem;
+            border-radius: 50%;
+        }
+
+        /* --- WHY CHOOSE US --- */
+        .why-section {
+            padding: 7rem 0;
+            background-color: var(--bg-deep-charcoal);
+        }
+
+        /* --- LOCATION SECTION --- */
+        .location-section {
+            padding: 7rem 0;
+            background-color: var(--bg-black);
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .location-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 3rem;
+        }
+
+        .location-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .location-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .location-detail-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .location-detail-item i {
+            color: var(--tomato-red);
+            font-size: 1.25rem;
+            margin-top: 0.2rem;
+        }
+
+        .location-detail-item div h4 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .location-detail-item div p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .location-image {
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            height: 440px;
+        }
+
+        .location-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact-section {
+            padding: 7rem 0;
+            background-color: var(--bg-deep-charcoal);
+        }
+
+        .contact-wrapper {
+            max-width: 750px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 3.5rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-cream);
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            background: var(--bg-deep-charcoal);
+            border: 1px solid var(--border-color);
+            padding: 0.85rem 1rem;
+            border-radius: 12px;
+            color: var(--text-warm-white);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--tomato-red);
+            outline: none;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-fallback {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .contact-fallback a {
+            color: var(--golden-yellow);
+            font-weight: 600;
+        }
+
+        .form-success-msg {
+            background: rgba(40, 167, 69, 0.15);
+            border: 1px solid #28a745;
+            color: #d4edda;
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- FAQ SECTION --- */
+        .faq-section {
+            padding: 7rem 0;
+            background-color: var(--bg-black);
+        }
+
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            padding: 1.25rem 1.5rem;
+            text-align: left;
+            color: var(--text-warm-white);
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+            color: var(--tomato-red);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 1.25rem;
+        }
+
+        /* --- FINAL CTA --- */
+        .final-cta {
+            position: relative;
+            padding: 8rem 0;
+            text-align: center;
+            background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.85)), url('https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+        }
+
+        .final-cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .final-cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* --- FOOTER --- */
+        .footer {
+            background-color: var(--bg-black);
+            border-top: 1px solid var(--border-color);
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-warm-white);
+        }
+
+        .footer-col p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--tomato-red);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* --- MODAL --- */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            padding: 1.5rem;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            max-width: 550px;
+            width: 100%;
+            overflow: hidden;
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active .modal-card {
+            transform: translateY(0);
+        }
+
+        .modal-img {
+            height: 260px;
+            width: 100%;
+            position: relative;
+        }
+
+        .modal-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(10, 10, 10, 0.7);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            background: var(--tomato-red);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-category {
+            color: var(--golden-yellow);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .modal-body h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .modal-body p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* --- LIGHTBOX --- */
+        .lightbox-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(5,5,5,0.95);
+            z-index: 2500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .lightbox-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox-img-container {
+            max-width: 900px;
+            max-height: 80vh;
+            position: relative;
+        }
+
+        .lightbox-img-container img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 12px;
+            object-fit: contain;
+        }
+
+        .lightbox-close, .lightbox-prev, .lightbox-next {
+            position: absolute;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .lightbox-close {
+            top: -50px;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+        }
+
+        .lightbox-prev, .lightbox-next {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            font-size: 1.25rem;
+        }
+
+        .lightbox-prev { left: -70px; }
+        .lightbox-next { right: -70px; }
+
+        .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover {
+            background: var(--tomato-red);
+        }
+
+        /* --- BACK TO TOP --- */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--tomato-red);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            z-index: 900;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(230,57,70,0.4);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .back-to-top:hover {
+            background: var(--deep-red);
+            transform: translateY(-3px);
+        }
+
+        /* --- RESPONSIVE BREAKPOINTS --- */
+        @media (max-width: 1200px) {
+            .container { padding: 0 1.5rem; }
+            .nav-container { padding: 1rem 1.5rem; }
+            .builder-wrapper { grid-template-columns: 1fr; }
+            .lightbox-prev { left: 10px; }
+            .lightbox-next { right: 10px; }
+        }
+
+        @media (max-width: 992px) {
+            .about-grid, .location-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .about-image, .location-image { height: 360px; }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--bg-card);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: var(--transition);
+                box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+                z-index: 1001;
+            }
+            .nav-links.active { right: 0; }
+            .hamburger { display: flex; z-index: 1002; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .hero { padding: 7rem 0 4rem; text-align: center; }
+            .hero-content { margin: 0 auto; }
+            .hero-buttons { justify-content: center; }
+            .floating-badges { display: none; }
+            .contact-wrapper { padding: 2rem 1.5rem; }
+        }
+
+        @media (max-width: 576px) {
+            html { font-size: 15px; }
+            .section-header { margin-bottom: 2.5rem; }
+            .builder-options { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                MR. SHEZY
+                <span>Pizza Shop</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#pizzas">Pizzas</a>
+                <a href="#combos">Combos</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="nav-btn-search" id="searchToggle" aria-label="Search Menu"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <a href="tel:03241289503" class="call-btn"><i class="fa-solid fa-phone"></i> 03241289503</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hot, Fresh & Made for Pizza Lovers</h1>
+                <p>Explore delicious pizzas, sides and favorites from Mr. Shezy Pizza Shop.</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn-primary">Explore Menu <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="tel:03241289503" class="btn-secondary">Call 03241289503</a>
+                </div>
+            </div>
+        </div>
+        <div class="floating-badges">
+            <div class="badge-card">
+                <i class="fa-solid fa-pizza-slice"></i>
+                <span>Fresh Pizza</span>
+            </div>
+            <div class="badge-card">
+                <i class="fa-solid fa-fire-flame-curved"></i>
+                <span>Hot & Delicious</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-strip">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-pizza-slice"></i></div>
+                    <div class="feature-text">
+                        <h4>Fresh Pizza Selection</h4>
+                        <p>Prepared daily with care</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-drumstick-bite"></i></div>
+                    <div class="feature-text">
+                        <h4>Delicious Sides</h4>
+                        <p>Wings, fries & starters</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-utensils"></i></div>
+                    <div class="feature-text">
+                        <h4>Family Favorites</h4>
+                        <p>Burgers, pasta & more</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div class="feature-text">
+                        <h4>Easy Enquiry</h4>
+                        <p>Call or message us directly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1000&auto=format&fit=crop" alt="Pizza preparation environment" loading="lazy">
+                </div>
+                <div class="about-content">
+                    <span>Our Story</span>
+                    <h2>Welcome to Mr. Shezy Pizza Shop</h2>
+                    <p>At Mr. Shezy Pizza Shop, located in Gulshan-e-Iqbal, Karachi, we are passionate about serving quality food crafted to satisfy every craving. From our signature handmade pizzas loaded with rich cheese and premium toppings to our delicious selection of burgers, pasta, wings, and sides, every item on our menu is designed to deliver a memorable dining experience.</p>
+                    <p>Whether you are exploring new flavors or sticking to your all-time favorites, our menu offers a wide variety of choices for everyone. Browse our selection, discover your next favorite meal, and feel free to reach out to us with any enquiries.</p>
+                    <a href="#menu" class="btn-primary" style="margin-top: 1rem;">View Our Menu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <span>Discover Our Offerings</span>
+                <h2>Explore the Complete Menu</h2>
+                <p>Browse our extensive selection of pizzas, burgers, pasta, sides, desserts and beverages.</p>
+            </div>
+
+            <div class="menu-controls">
+                <div class="search-sort-bar">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="menuSearch" placeholder="Search menu...">
+                    </div>
+                    <div class="sort-box">
+                        <select id="menuSort">
+                            <option value="featured">Featured</option>
+                            <option value="az">A–Z</option>
+                            <option value="category">Category</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-tabs" id="menuFilters">
+                    <button class="tab-btn active" data-filter="all">All</button>
+                    <button class="tab-btn" data-filter="Pizzas">Pizzas</button>
+                    <button class="tab-btn" data-filter="Burgers">Burgers</button>
+                    <button class="tab-btn" data-filter="Pasta">Pasta</button>
+                    <button class="tab-btn" data-filter="Fries">Fries</button>
+                    <button class="tab-btn" data-filter="Wings">Wings</button>
+                    <button class="tab-btn" data-filter="Sandwiches">Sandwiches</button>
+                    <button class="tab-btn" data-filter="Starters">Starters</button>
+                    <button class="tab-btn" data-filter="Desserts">Desserts</button>
+                    <button class="tab-btn" data-filter="Beverages">Beverages</button>
+                </div>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+                </div>
+        </div>
+    </section>
+
+    <section class="pizza-section" id="pizzas">
+        <div class="container">
+            <div class="section-header">
+                <span>Signature Varieties</span>
+                <h2>Dedicated Pizza Collection</h2>
+                <p>Hand-tossed crusts, rich tomato sauce, premium cheese, and perfectly seasoned toppings.</p>
+            </div>
+
+            <div class="pizza-grid">
+                <div class="pizza-item-card">
+                    <div class="pizza-item-img">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop" alt="Chicken Tikka Pizza" loading="lazy">
+                    </div>
+                    <h3>Chicken Tikka Pizza</h3>
+                    <p>Tender tikka chunks, onions, and traditional spices.</p>
+                    <a href="#menu" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Enquire Now</a>
+                </div>
+                <div class="pizza-item-card">
+                    <div class="pizza-item-img">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=800&auto=format&fit=crop" alt="Chicken Fajita Pizza" loading="lazy">
+                    </div>
+                    <h3>Chicken Fajita Pizza</h3>
+                    <p>Fajita spiced chicken, bell peppers, and onions.</p>
+                    <a href="#menu" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Enquire Now</a>
+                </div>
+                <div class="pizza-item-card">
+                    <div class="pizza-item-img">
+                        <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=800&auto=format&fit=crop" alt="BBQ Chicken Pizza" loading="lazy">
+                    </div>
+                    <h3>BBQ Chicken Pizza</h3>
+                    <p>Smoky BBQ chicken drizzle with rich mozzarella cheese.</p>
+                    <a href="#menu" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Enquire Now</a>
+                </div>
+             
+            </div>
+
+            <div style="text-align: center;">
+                <a href="#menu" class="btn-secondary">Explore All Pizzas</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="explorer-section">
+        <div class="container">
+            <div class="section-header">
+                <span>Interactive Style Guide</span>
+                <h2>Explore Pizzas by Preference</h2>
+                <p>Select a style to discover matching pizza varieties.</p>
+            </div>
+
+            <div class="explorer-tabs">
+                <button class="explorer-tab-btn active" data-style="Chicken">Chicken</button>
+                <button class="explorer-tab-btn" data-style="Cheese">Cheese</button>
+                <button class="explorer-tab-btn" data-style="Spicy">Spicy</button>
+                <button class="explorer-tab-btn" data-style="BBQ">BBQ</button>
+                <button class="explorer-tab-btn" data-style="Vegetarian">Vegetarian</button>
+                <button class="explorer-tab-btn" data-style="Loaded">Loaded</button>
+            </div>
+
+            <div class="menu-grid" id="explorerGrid">
+                </div>
+        </div>
+    </section>
+
+    <section class="sides-section">
+        <div class="container">
+            <div class="section-header">
+                <span>Complement Your Meal</span>
+                <h2>Sides, Snacks & Starters</h2>
+                <p>Crispy fries, savory garlic breads, loaded wings and more.</p>
+            </div>
+
+            <div class="menu-grid" id="sidesGrid">
+                </div>
+        </div>
+    </section>
+
+    <section class="meal-builder-section" id="combos">
+        <div class="container">
+            <div class="section-header">
+                <span>Custom Combinations</span>
+                <h2>Build Your Perfect Meal</h2>
+                <p>Select your preferred pizza, side, and drink to design your ideal combination.</p>
+            </div>
+
+            <div class="builder-wrapper">
+                <div class="builder-steps">
+                    <div class="builder-group">
+                        <h3>1. Choose Pizza Flavor</h3>
+                        <div class="builder-options" data-group="pizza">
+                            <button class="builder-option-btn selected" data-value="Chicken Tikka">Chicken</button>
+                            <button class="builder-option-btn" data-value="Cheese Lovers">Cheese</button>
+                            <button class="builder-option-btn" data-value="BBQ Chicken">BBQ</button>
+                            <button class="builder-option-btn" data-value="Spicy Chicken">Spicy</button>
+                        </div>
+                    </div>
+                    <div class="builder-group">
+                        <h3>2. Choose Side Option</h3>
+                        <div class="builder-options" data-group="side">
+                            <button class="builder-option-btn selected" data-value="Classic Fries">Fries</button>
+                            <button class="builder-option-btn" data-value="Garlic Bread">Garlic Bread</button>
+                            <button class="builder-option-btn" data-value="BBQ Wings">Wings</button>
+                            <button class="builder-option-btn" data-value="Chicken Nuggets">Nuggets</button>
+                        </div>
+                    </div>
+                    <div class="builder-group">
+                        <h3>3. Choose Beverage</h3>
+                        <div class="builder-options" data-group="drink">
+                            <button class="builder-option-btn selected" data-value="Soft Drink">Cold Beverage</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="builder-summary">
+                    <div>
+                        <h3>Meal Selection</h3>
+                        <div class="summary-items">
+                            <div class="summary-item">
+                                <span>Pizza:</span>
+                                <span id="summaryPizza">Chicken Tikka</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Side:</span>
+                                <span id="summarySide">Classic Fries</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Drink:</span>
+                                <span id="summaryDrink">Soft Drink</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="tel:03241289503" class="btn-primary" style="width: 100%; text-align: center;">Call to Enquire</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="size-guide-section">
+        <div class="container">
+            <div class="section-header">
+                <span>Portion Guide</span>
+                <h2>Pizza Size Guide</h2>
+                <p>Choose the right size for your gathering or appetite.</p>
+            </div>
+
+            <div class="size-grid">
+                <div class="size-card">
+                    <div class="size-icon"><i class="fa-solid fa-pizza-slice"></i></div>
+                    <h3>Small</h3>
+                    <p>Ideal for individual snacking or single portions.</p>
+                </div>
+                <div class="size-card">
+                    <div class="size-icon"><i class="fa-solid fa-pizza-slice"></i></div>
+                    <h3>Medium</h3>
+                    <p>Perfect for sharing between two people.</p>
+                </div>
+                <div class="size-card">
+                    <div class="size-icon"><i class="fa-solid fa-pizza-slice"></i></div>
+                    <h3>Large</h3>
+                    <p>Great for family meals and group gatherings.</p>
+                </div>
+            </div>
+
+            <p class="size-note">Ask the shop about available sizes and options.</p>
+        </div>
+    </section>
+
+    <section class="flow-section">
+        <div class="container">
+            <div class="section-header">
+                <span>Simple Steps</span>
+                <h2>Enquiry & Ordering Flow</h2>
+                <p>How to place your enquiry or order with Mr. Shezy Pizza Shop.</p>
+            </div>
+
+            <div class="flow-grid">
+                <div class="flow-card">
+                    <div class="flow-step-num">1</div>
+                    <h3>Explore the Menu</h3>
+                    <p>Browse through our wide variety of pizzas, burgers, sides, and beverages.</p>
+                </div>
+                <div class="flow-card">
+                    <div class="flow-step-num">2</div>
+                    <h3>Choose Your Favorite</h3>
+                    <p>Select the items that match your craving using our interactive menu and checklist.</p>
+                </div>
+                <div class="flow-card">
+                    <div class="flow-step-num">3</div>
+                    <h3>Call Mr. Shezy Pizza Shop</h3>
+                    <p>Directly contact us at <a href="tel:03241289503" style="color: var(--golden-yellow); font-weight: 600;">03241289503</a>.</p>
+                </div>
+                <div class="flow-card">
+                    <div class="flow-step-num">4</div>
+                    <h3>Confirm Your Order</h3>
+                    <p>Discuss your preferences, requirements, and confirmation directly with our staff.</p>
+                </div>
+            </div>
+
+            <div class="checklist-container">
+                <h3>Pizza Order Checklist</h3>
+                <div class="checklist-items">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-pizza" data-key="pizza">
+                        <label for="check-pizza">Pizza</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-burger" data-key="burger">
+                        <label for="check-burger">Burger</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-pasta" data-key="pasta">
+                        <label for="check-pasta">Pasta</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-fries" data-key="fries">
+                        <label for="check-fries">Fries</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-wings" data-key="wings">
+                        <label for="check-wings">Wings</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-sandwich" data-key="sandwich">
+                        <label for="check-sandwich">Sandwich</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-starter" data-key="starter">
+                        <label for="check-starter">Starter</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-dessert" data-key="dessert">
+                        <label for="check-dessert">Dessert</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-beverage" data-key="beverage">
+                        <label for="check-beverage">Beverage</label>
+                    </div>
+                </div>
+                <div class="checklist-actions">
+                    <button class="btn-clear" id="clearChecklist">Clear Checklist</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span>Visual Feast</span>
+                <h2>Food Gallery</h2>
+                <p>A glimpse into our freshly prepared dishes and culinary environment.</p>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-index="0">
+                    <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=800&auto=format&fit=crop" alt="Pizza close-up" loading="lazy">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-index="1">
+                    <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=800&auto=format&fit=crop" alt="Cheese pizza" loading="lazy">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-index="2">
+                    <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=800&auto=format&fit=crop" alt="Chicken pizza" loading="lazy">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-index="3">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop" alt="Pizza slice" loading="lazy">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-index="4">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=800&auto=format&fit=crop" alt="Pizza preparation" loading="lazy">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+
+                <div class="gallery-item" data-index="6">
+                    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=800&auto=format&fit=crop" alt="Fries" loading="lazy">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-index="7">
+                    <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?q=80&w=800&auto=format&fit=crop" alt="Wings" loading="lazy">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-index="8">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop" alt="Burger" loading="lazy">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+
+                <div class="gallery-item" data-index="10">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800&auto=format&fit=crop" alt="Dessert" loading="lazy">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-index="11">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop" alt="Restaurant food" loading="lazy">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-index="12">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=800&auto=format&fit=crop" alt="Beverage" loading="lazy">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gallery-item" data-index="13">
+                    <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=800&auto=format&fit=crop" alt="Pizza table setup" loading="lazy">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-section">
+        <div class="container">
+            <div class="section-header">
+                <span>The Quality Commitment</span>
+                <h2>Why Choose Mr. Shezy Pizza Shop</h2>
+                <p>Focused on quality ingredients, variety, and accessible customer service.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="feature-text">
+                        <h4>Variety of Menu Choices</h4>
+                        <p>From pizzas to burgers and pasta</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-pizza-slice"></i></div>
+                    <div class="feature-text">
+                        <h4>Pizza & Favorite Sides</h4>
+                        <p>Complete meals for every appetite</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="feature-text">
+                        <h4>Easy Enquiry</h4>
+                        <p>Quick phone access for all questions</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="feature-text">
+                        <h4>Convenient Local Location</h4>
+                        <p>Gulshan-e-Iqbal, Block 10A, Karachi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location-section" id="contact">
+        <div class="container">
+            <div class="location-grid">
+                <div class="location-card">
+                    <h3>Find Us in Karachi</h3>
+                    <div class="location-details">
+                        <div class="location-detail-item">
+                            <i class="fa-solid fa-store"></i>
+                            <div>
+                                <h4>Mr. Shezy Pizza Shop</h4>
+                                <p>Gulshan-e-Iqbal, Block 10A Housing Society, Karachi, 75300, Pakistan</p>
+                            </div>
+                        </div>
+                        <div class="location-detail-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4>Phone Enquiries</h4>
+                                <p><a href="tel:03241289503" style="color: var(--golden-yellow); font-weight: 600;">03241289503</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="tel:03241289503" class="btn-primary">Call Now</a>
+                </div>
+                <div class="location-image">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000&auto=format&fit=crop" alt="Restaurant environment" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span>Get in Touch</span>
+                <h2>Send an Enquiry</h2>
+                <p>Have a question about our menu items? Fill out the form below.</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="form-success-msg" id="formSuccess">Thank you for your enquiry. We have received your message!</div>
+                <form class="contact-form" id="enquiryForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactName">Name</label>
+                            <input type="text" id="contactName" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Phone</label>
+                            <input type="tel" id="contactPhone" placeholder="Your Phone Number" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email5" id="contactEmail" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactItem">Menu Item</label>
+                            <select id="contactItem">
+                                <option value="General Enquiry">General Enquiry</option>
+                                <option value="Chicken Tikka Pizza">Chicken Tikka Pizza</option>
+                                <option value="Chicken Fajita Pizza">Chicken Fajita Pizza</option>
+                                <option value="Creamy Alfredo Pasta">Creamy Alfredo Pasta</option>
+                                <option value="Crispy Chicken Burger">Crispy Chicken Burger</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" placeholder="Your message or enquiry details..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Submit Enquiry</button>
+                </form>
+                <div class="contact-fallback">
+                    Prefer to speak directly? Call <a href="tel:03241289503">03241289503</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span>Common Questions</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Find quick answers regarding our menu, location, and services.</p>
+            </div>
+
+            <div class="faq-accordion" id="faqAccordion">
+                <div class="faq-item">
+                    <button class="faq-question">What does Mr. Shezy Pizza Shop offer?<i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>We offer a diverse menu featuring delicious pizzas, burgers, pasta, fries, wings, sandwiches, starters, desserts, and beverages.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What types of pizzas are available?<i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Our pizza selection includes Chicken Tikka, Chicken Fajita, BBQ Chicken, Creamy Chicken, Cheese Lovers, Pepperoni Style, Veggie, Spicy Chicken, Garlic Chicken, and Special Loaded Pizzas.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Can I enquire about a specific menu item?<i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Yes, you can easily enquire about any item by calling us directly at 03241289503 or using our online enquiry form.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Does the menu include sides?<i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Yes, our menu features a wide array of sides including garlic bread, fries, loaded fries, chicken nuggets, and wings.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Where is Mr. Shezy Pizza Shop located?<i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>We are located at Gulshan-e-Iqbal, Block 10A Housing Society, Karachi, 75300, Pakistan.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How can I contact the shop?<i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>You can contact us via phone at 03241289503 or submit an enquiry through our contact form on this website.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Can I ask about available pizza sizes?<i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Yes, feel free to call our shop to enquire about available pizza sizes, crust options, and current availability.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Can I enquire about menu options?<i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Absolutely! Our team is always happy to discuss menu options and help you choose your favorite meals.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>Ready for Something Delicious?</h2>
+                <p>Explore the menu and contact Mr. Shezy Pizza Shop to enquire about your favorite food.</p>
+                <div class="final-cta-buttons">
+                    <a href="#menu" class="btn-primary">Explore Menu</a>
+                    <a href="tel:03241289503" class="btn-secondary">Call 03241289503</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#home" class="logo" style="margin-bottom: 1rem;">
+                        MR. SHEZY
+                        <span>Pizza Shop</span>
+                    </a>
+                    <p>Serving hot and fresh pizzas, burgers, pasta, and savory favorites in Karachi.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#pizzas">Pizzas</a></li>
+                        <li><a href="#combos">Combos</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Information</h4>
+                    <p>Gulshan-e-Iqbal, Block 10A Housing Society, Karachi, 75300, Pakistan</p>
+                    <p><a href="tel:03241289503" style="color: var(--golden-yellow); font-weight: 600;">Phone: 03241289503</a></p>
+                    <p><a href="https://wa.me/923241289503" target="_blank" rel="noopener noreferrer" style="color: #25d366; font-weight: 600;"><i class="fa-brands fa-whatsapp"></i> WhatsApp: +92 324 1289503</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Mr. Shezy Pizza Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="itemModal">
+        <div class="modal-card">
+            <div class="modal-img">
+                <img id="modalImg" src="" alt="Menu item">
+                <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <span class="modal-category" id="modalCategory">Category</span>
+                <h3 id="modalTitle">Item Name</h3>
+                <p id="modalDesc">Item description goes here.</p>
+                <div class="modal-actions">
+                    <a href="tel:03241289503" class="btn-primary" style="width: 100%; text-align: center;">Enquire via Phone</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lightbox-overlay" id="lightbox">
+        <div class="lightbox-img-container">
+            <button class="lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></button>
+            <button class="lightbox-prev" id="lightboxPrev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="lightbox-next" id="lightboxNext"><i class="fa-solid fa-chevron-right"></i></button>
+            <img id="lightboxImg" src="" alt="Enlarged gallery image">
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script>
+        // 30 Realistic Menu Concepts with unique Unsplash images
+        const menuData = [
+            { id: 1, name: "Chicken Tikka Pizza", category: "Pizzas", desc: "Tender tikka chunks, onions, and traditional spices.", img: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop", style: "Chicken" },
+            { id: 2, name: "Chicken Fajita Pizza", category: "Pizzas", desc: "Fajita spiced chicken, bell peppers, and onions.", img: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=800&auto=format&fit=crop", style: "Chicken" },
+            { id: 3, name: "BBQ Chicken Pizza", category: "Pizzas", desc: "Smoky BBQ chicken drizzle with rich mozzarella cheese.", img: "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=800&auto=format&fit=crop", style: "BBQ" },
+            { id: 6, name: "Pepperoni Style Pizza", category: "Pizzas", desc: "Savory sliced toppings on a rich tomato base.", img: "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=800&auto=format&fit=crop", style: "Loaded" },
+            { id: 7, name: "Veggie Pizza", category: "Pizzas", desc: "Fresh bell peppers, olives, mushrooms, and sweet corn.", img: "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?q=80&w=800&auto=format&fit=crop", style: "Vegetarian" },
+            { id: 8, name: "Spicy Chicken Pizza", category: "Pizzas", desc: "Fiery green chillies, spicy chicken, and hot sauce.", img: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=800&auto=format&fit=crop", style: "Spicy" },
+            { id: 9, name: "Garlic Chicken Pizza", category: "Pizzas", desc: "Infused garlic sauce with savory chicken pieces.", img: "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=800&auto=format&fit=crop", style: "Chicken" },
+            { id: 10, name: "Special Loaded Pizza", category: "Pizzas", desc: "An ultimate combination of meats, cheese, and vegetables.", img: "https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=800&auto=format&fit=crop", style: "Loaded" },
+            
+            { id: 11, name: "Classic Chicken Burger", category: "Burgers", desc: "Juicy chicken patty with lettuce and signature sauce.", img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop", style: "Chicken" },
+            { id: 12, name: "Crispy Chicken Burger", category: "Burgers", desc: "Crunchy fried chicken fillet with creamy mayo.", img: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?q=80&w=800&auto=format&fit=crop", style: "Chicken" },
+            { id: 13, name: "Cheese Burger", category: "Burgers", desc: "Savory patty layered with melting cheddar cheese.", img: "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?q=80&w=800&auto=format&fit=crop", style: "Cheese" },
+            { id: 14, name: "BBQ Chicken Burger", category: "Burgers", desc: "Grilled chicken coated in smoky BBQ sauce.", img: "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=800&auto=format&fit=crop", style: "BBQ" },
+
+            { id: 16, name: "Chicken Pasta", category: "Pasta", desc: "Savory tomato and herb pasta tossed with grilled chicken.", img: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=800&auto=format&fit=crop", style: "Chicken" },
+            { id: 17, name: "Arrabbiata Pasta", category: "Pasta", desc: "Spicy tomato sauce penne with garlic and chilli flakes.", img: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=800&auto=format&fit=crop", style: "Spicy" },
+
+            { id: 18, name: "Classic Fries", category: "Fries", desc: "Golden crispy potato fries lightly salted.", img: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=800&auto=format&fit=crop", style: "Vegetarian" },
+            { id: 19, name: "Cheese Fries", category: "Fries", desc: "Hot crispy fries drenched in melted liquid cheese.", img: "https://images.unsplash.com/photo-1585109649139-366815a0d713?q=80&w=800&auto=format&fit=crop", style: "Cheese" },
+            { id: 20, name: "Loaded Fries", category: "Fries", desc: "Fries topped with chicken chunks, sauce, and cheese.", img: "https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?q=80&w=800&auto=format&fit=crop", style: "Loaded" },
+            { id: 21, name: "Masala Fries", category: "Fries", desc: "Fries tossed in spicy regional seasoning.", img: "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=800&auto=format&fit=crop", style: "Spicy" },
+
+            { id: 22, name: "BBQ Wings", category: "Wings", desc: "Juicy chicken wings coated in sweet and smoky BBQ glaze.", img: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?q=80&w=800&auto=format&fit=crop", style: "BBQ" },
+            { id: 23, name: "Spicy Wings", category: "Wings", desc: "Hot and spicy fried wings served with dip.", img: "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?q=80&w=800&auto=format&fit=crop", style: "Spicy" },
+            { id: 24, name: "Crispy Wings", category: "Wings", desc: "Golden-brown crunchy fried chicken wings.", img: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?q=80&w=800&auto=format&fit=crop", style: "Chicken" },
+
+            { id: 25, name: "Chicken Sandwich", category: "Sandwiches", desc: "Tender shredded chicken with lettuce in toasted bread.", img: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=800&auto=format&fit=crop", style: "Chicken" },
+            { id: 26, name: "Grilled Chicken Sandwich", category: "Sandwiches", desc: "Herb-marinated grilled chicken breast slices.", img: "https://images.unsplash.com/photo-1539252554453-80ab65ce3586?q=80&w=800&auto=format&fit=crop", style: "Chicken" },
+            { id: 27, name: "Club Sandwich", category: "Sandwiches", desc: "Triple layered sandwich with chicken, egg, and fresh veggies.", img: "https://images.unsplash.com/photo-1550507992-eb63ffee0847?q=80&w=800&auto=format&fit=crop", style: "Loaded" },
+
+            { id: 30, name: "Chicken Nuggets", category: "Starters", desc: "Crispy bite-sized breaded chicken pieces.", img: "https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=800&auto=format&fit=crop", style: "Chicken" },
+
+            { id: 31, name: "Chocolate Brownie", category: "Desserts", desc: "Rich fudgy chocolate brownie square.", img: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800&auto=format&fit=crop", style: "Sweet" },
+            { id: 32, name: "Chocolate Lava Cake", category: "Desserts", desc: "Warm cake with a molten chocolate center.", img: "https://images.unsplash.com/photo-1579372786545-d24232daf58c?q=80&w=800&auto=format&fit=crop", style: "Sweet" },
+
+            { id: 33, name: "Soft Drink", category: "Beverages", desc: "Chilled refreshing carbonated beverage.", img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=800&auto=format&fit=crop", style: "Cool" },
+            { id: 34, name: "Cold Beverage", category: "Beverages", desc: "Refreshing chilled beverage choice.", img: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=800&auto=format&fit=crop", style: "Cool" }
+        ];
+
+        // DOM Elements
+        const navbar = document.getElementById('navbar');
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const menuGrid = document.getElementById('menuGrid');
+        const menuSearch = document.getElementById('menuSearch');
+        const menuSort = document.getElementById('menuSort');
+        const menuFilters = document.getElementById('menuFilters');
+        const explorerGrid = document.getElementById('explorerGrid');
+        const sidesGrid = document.getElementById('sidesGrid');
+        const itemModal = document.getElementById('itemModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalCategory = document.getElementById('modalCategory');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalClose = document.getElementById('modalClose');
+        const faqAccordion = document.getElementById('faqAccordion');
+        const backToTop = document.getElementById('backToTop');
+        const enquiryForm = document.getElementById('enquiryForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        // Sticky Navbar & Back to Top
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+                backToTop.classList.add('active');
+            } else {
+                navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+                backToTop.classList.remove('active');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mobile Menu
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('open');
+            });
+        });
+
+        // Render Menu Items
+        function renderMenu(items, container) {
+            container.innerHTML = '';
+            if (items.length === 0) {
+                container.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 3rem;">No items found.</p>';
+                return;
+            }
+            items.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'menu-card';
+                card.innerHTML = `
+                    <div class="menu-card-img">
+                        <span class="menu-category-tag">${item.category}</span>
+                        <img src="${item.img}" alt="${item.name}" loading="lazy">
+                    </div>
+                    <div class="menu-card-body">
+                        <h3>${item.name}</h3>
+                        <p>${item.desc}</p>
+                        <div class="menu-card-actions">
+                            <button class="btn-details" onclick="openModal('${item.name}')">View Details</button>
+                            <a href="tel:03241289503" class="btn-enquire" style="text-align: center;">Enquire</a>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Initial render
+        renderMenu(menuData, menuGrid);
+
+        // Sides render
+        const sidesData = menuData.filter(item => ['Fries', 'Wings', 'Starters', 'Sandwiches'].includes(item.category));
+        renderMenu(sidesData, sidesGrid);
+
+        // Pizza Explorer render
+        function renderExplorer(style) {
+            const filtered = menuData.filter(item => item.category === 'Pizzas' && item.style === style);
+            renderMenu(filtered.length > 0 ? filtered : menuData.filter(item => item.category === 'Pizzas').slice(0, 4), explorerGrid);
+        }
+        renderExplorer('Chicken');
+
+        document.querySelectorAll('.explorer-tab-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.explorer-tab-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                renderExplorer(e.target.getAttribute('data-style'));
+            });
+        });
+
+        // Filtering, Searching, Sorting
+        let currentCategory = 'all';
+        let searchQuery = '';
+        let sortType = 'featured';
+
+        function filterAndSortMenu() {
+            let result = [...menuData];
+
+            if (currentCategory !== 'all') {
+                result = result.filter(item => item.category === currentCategory);
+            }
+
+            if (searchQuery.trim() !== '') {
+                const q = searchQuery.toLowerCase();
+                result = result.filter(item => item.name.toLowerCase().includes(q) || item.desc.toLowerCase().includes(q) || item.category.toLowerCase().includes(q));
+            }
+
+            if (sortType === 'az') {
+                result.sort((a, b) => a.name.localeCompare(b.name));
+            } else if (sortType === 'category') {
+                result.sort((a, b) => a.category.localeCompare(b.category));
+            }
+
+            renderMenu(result, menuGrid);
+        }
+
+        document.querySelectorAll('.filter-tabs .tab-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                currentCategory = e.target.getAttribute('data-filter');
+                filterAndSortMenu();
+            });
+        });
+
+        menuSearch.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            filterAndSortMenu();
+        });
+
+        menuSort.addEventListener('change', (e) => {
+            sortType = e.target.value;
+            filterAndSortMenu();
+        });
+
+        // Modal Functionality
+        window.openModal = function(itemName) {
+            const item = menuData.find(i => i.name === itemName);
+            if (!item) return;
+            modalImg.src = item.img;
+            modalImg.alt = item.name;
+            modalCategory.textContent = item.category;
+            modalTitle.textContent = item.name;
+            modalDesc.textContent = item.desc;
+            itemModal.classList.add('active');
+        };
+
+        modalClose.addEventListener('click', () => {
+            itemModal.classList.remove('active');
+        });
+
+        itemModal.addEventListener('click', (e) => {
+            if (e.target === itemModal) {
+                itemModal.classList.remove('active');
+            }
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const wasActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!wasActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Combination Meal Builder
+        const builderState = { pizza: 'Chicken Tikka', side: 'Classic Fries', drink: 'Soft Drink' };
+        document.querySelectorAll('.builder-options').forEach(group => {
+            const groupName = group.getAttribute('data-group');
+            group.querySelectorAll('.builder-option-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    group.querySelectorAll('.builder-option-btn').forEach(b => b.classList.remove('selected'));
+                    e.target.classList.add('selected');
+                    builderState[groupName] = e.target.getAttribute('data-value');
+                    document.getElementById(`summary${groupName.charAt(0).toUpperCase() + groupName.slice(1)}`).textContent = builderState[groupName];
+                });
+            });
+        });
+
+        // Order Checklist with localStorage
+        const checklistInputs = document.querySelectorAll('.checklist-items input');
+        checklistInputs.forEach(input => {
+            const key = 'shezy_' + input.getAttribute('data-key');
+            const saved = localStorage.getItem(key);
+            if (saved === 'true') {
+                input.checked = true;
+            }
+            input.addEventListener('change', () => {
+                localStorage.setItem(key, input.checked);
+            });
+        });
+
+        document.getElementById('clearChecklist').addEventListener('click', () => {
+            checklistInputs.forEach(input => {
+                input.checked = false;
+                localStorage.removeItem('shezy_' + input.getAttribute('data-key'));
+            });
+        });
+
+        // Gallery Lightbox
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        let currentGalleryIndex = 0;
+        const galleryImages = Array.from(galleryItems).map(item => item.querySelector('img').src);
+
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentGalleryIndex = index;
+                lightboxImg.src = galleryImages[currentGalleryIndex];
+                lightbox.classList.add('active');
+            });
+        });
+
+        function showLightboxIndex(index) {
+            if (index < 0) currentGalleryIndex = galleryImages.length - 1;
+            else if (index >= galleryImages.length) currentGalleryIndex = 0;
+            else currentGalleryIndex = index;
+            lightboxImg.src = galleryImages[currentGalleryIndex];
+        }
+
+        lightboxPrev.addEventListener('click', () => showLightboxIndex(currentGalleryIndex - 1));
+        lightboxNext.addEventListener('click', () => showLightboxIndex(currentGalleryIndex + 1));
+        lightboxClose.addEventListener('click', () => lightbox.classList.remove('active'));
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) lightbox.classList.remove('active');
+        });
+
+        // Keyboard support (Escape key)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                itemModal.classList.remove('active');
+                lightbox.classList.remove('active');
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('open');
+            }
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'ArrowLeft') showLightboxIndex(currentGalleryIndex - 1);
+                if (e.key === 'ArrowRight') showLightboxIndex(currentGalleryIndex + 1);
+            }
+        });
+
+        // Contact Form Validation & Success State
+        enquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('contactName').value.trim();
+            const phone = document.getElementById('contactPhone').value.trim();
+            const message = document.getElementById('contactMessage').value.trim();
+
+            if (!name || !phone || !message) {
+                alert('Please fill out all required fields.');
+                return;
+            }
+
+            formSuccess.style.display = 'block';
+            enquiryForm.reset();
+            setTimeout(() => {
+                formSuccess.style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
